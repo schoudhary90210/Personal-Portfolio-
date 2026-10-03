@@ -1,93 +1,77 @@
-<div align="center">
+# Personal Portfolio
 
-# 🦇 BATCOMPUTER TERMINAL
+Siddhant Choudhary's personal site: **[siddhant-choudhary.vercel.app](https://siddhant-choudhary.vercel.app)**
 
-### A Batman Arkham-inspired developer portfolio
+A content-first portfolio covering experience, projects with case studies, education, skills and contact details. It's dark by default with a red accent and a light-mode toggle.
 
-![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)
-![GSAP](https://img.shields.io/badge/GSAP-3-88CE02?style=flat-square&logo=greensock)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-11-purple?style=flat-square)
-![Tailwind](https://img.shields.io/badge/Tailwind-4-38BDF8?style=flat-square&logo=tailwindcss)
+The previous Batman Arkham–style "Batcomputer" version still runs at [`/batcomputer`](https://siddhant-choudhary.vercel.app/batcomputer).
 
-[**🔴 LIVE DEMO →**](https://siddhantchoudhary.vercel.app)
+## Pages
 
-</div>
+| Route | What's there |
+|---|---|
+| `/` | Hero, experience timeline, featured projects, education, skills, contact |
+| `/about` | Longer story, experience, leadership and hackathons, education, skills, interests |
+| `/projects` | All projects |
+| `/projects/[slug]` | Case study: problem, what was built, a key decision, results and limits |
+| `/batcomputer` | The original Batman-themed experience |
 
----
+Every page is statically generated.
 
-## Overview
-
-An immersive Arkham-series inspired portfolio built as a Batcomputer terminal. Features a CRT monitor frame, cinematic boot sequences, particle systems, and interactive HUD elements — all running on a modern Next.js stack.
-
-Not a template. Every animation, effect, and interaction was custom-built.
-
-## Features
-
-**Core Experience**
-- WayneTech terminal boot sequence with system initialization, progress bars, and bat-symbol SVG draw
-- 3D CRT monitor frame with metallic bezels, corner screws, and screen effects
-- Video game-style main menu with periodic burst glitch effects
-- Bat swarm intro + click-triggered bat scatter particles
-- Gotham rain system with lightning flashes
-- Scarecrow fear toxin idle trigger (surprise glitch attack)
-
-**Sections**
-- **Operative Profile** — Animated dossier with scanning line, typing reveals, stat bars, and classification stamps
-- **Arsenal** — 6 project cards with holographic wireframes, 3D tilt tracking, and flip animations
-- **Gadgets** — Categorized tech inventory grid
-- **Case History** — Vertical timeline with scroll-triggered reveals
-- **Contact** — Encrypted channel connection sequence with signal waveform
-
-**Polish**
-- Cursor glow trail with lerp smoothing
-- Magnetic hover on interactive elements
-- Text reveal animations on section headers
-- Animated counter roll-up on metrics
-- Mechanical click SFX, bat screech, ambient audio
-- Full HUD overlay with live data tickers, scan lines, and corner brackets
-- Responsive design with simplified effects on mobile
-- `prefers-reduced-motion` accessibility support
-
-## Tech Stack
+## Stack
 
 | Layer | Technology |
-|-------|-----------|
-| Framework | Next.js 16 (App Router) |
+|---|---|
+| Framework | Next.js 16 (App Router), React 19 |
 | Language | TypeScript |
-| Styling | Tailwind CSS v4 |
-| Animation | GSAP + Framer Motion |
-| Audio | Howler.js + Web Audio API |
-| Particles | Canvas 2D |
-| Deployment | Vercel |
+| Styling | Tailwind CSS v4 with CSS-variable design tokens |
+| Fonts | Geist Sans and Geist Mono via `next/font` |
+| Icons | lucide-react |
+| Batcomputer | GSAP, Framer Motion, Howler.js, Canvas 2D |
+| Hosting | Vercel |
 
-## Run Locally
+## Editing content
+
+All copy lives in typed modules under `src/content/`, so no component changes are needed to update the site:
+
+| File | Contents |
+|---|---|
+| `site.ts` | Name, URL, email, GitHub, LinkedIn, resume path, location, graduation |
+| `profile.ts` | Hero intro, current role line, About paragraphs |
+| `experience.ts` | Work and research roles, earlier experience, leadership |
+| `projects.ts` | Project case studies. `featured: true` puts a project on the home page |
+| `education.ts`, `skills.ts`, `interests.ts` | Education, skill groups, hobbies |
+
+The resume is served from `public/resume/Siddhant_Choudhary_Resume.pdf`.
+
+## Project structure
+
+```
+src/
+├── app/
+│   ├── (site)/            # Main site: root layout, pages, OG image
+│   ├── (batcomputer)/     # Batcomputer: its own root layout and CSS
+│   ├── global-not-found.tsx
+│   ├── sitemap.ts
+│   └── robots.ts
+├── components/
+│   ├── layout/            # Navbar, Footer, Section, SiteShell
+│   ├── sections/          # Hero, Experience, Projects, Education, Skills, Contact…
+│   └── ui/                # Buttons, tags, cards, timeline, theme toggle, reveal
+├── content/               # All site copy
+├── lib/                   # Fonts, theme script, class helper
+└── batcomputer/           # Batman experience components, hooks, data
+```
+
+The two route groups are separate root layouts. Batman fonts, global CSS and the custom cursor can't leak into the main site, and moving between the two is a full page load.
+
+## Run locally
+
 ```bash
-git clone https://github.com/schoudhary90210/Batman-Themed-Portfolio.git
-cd Batman-Themed-Portfolio
+git clone https://github.com/schoudhary90210/Personal-Portfolio.git
+cd Personal-Portfolio
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000)
-
-## Project Structure
-```
-src/
-├── app/              # Next.js app router
-├── components/
-│   ├── boot/         # WayneTech boot sequence
-│   ├── effects/      # Bat particles, rain, scarecrow, cursor glow
-│   ├── menu/         # Main menu with glitch effects
-│   ├── sections/     # All 5 content sections
-│   └── ui/           # HUD, monitor frame, text reveal, magnetic wrap
-├── hooks/            # Audio, bat particles, magnetic, reduced motion
-├── data/             # Projects, experience, tech stack, contact
-└── lib/              # Animation variants, constants
-```
-
----
-
-<div align="center">
-<sub>Built by <a href="https://github.com/schoudhary90210">Siddhant Choudhary</a></sub>
-</div>
+Open [http://localhost:3000](http://localhost:3000).
