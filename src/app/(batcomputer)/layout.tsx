@@ -22,6 +22,13 @@ export const metadata: Metadata = {
   title: `Batcomputer — ${site.name}`,
   description:
     "The Batman Arkham–inspired version of Siddhant Choudhary's portfolio: a Batcomputer terminal with a boot sequence, Arsenal and Case History.",
+  openGraph: {
+    title: `Batcomputer — ${site.name}`,
+    url: `${site.url}/batcomputer`,
+    siteName: site.name,
+    type: "website",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Siddhant Enterprises" }],
+  },
   icons: {
     icon: [
       { url: "/favicon.ico" },
