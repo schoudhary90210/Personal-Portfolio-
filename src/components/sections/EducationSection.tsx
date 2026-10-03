@@ -22,11 +22,9 @@ export function EducationSection({ tone = 'tinted' }: { tone?: SectionTone }) {
               <p className="mt-1 text-muted">{education.degree}</p>
             </div>
           </div>
-          <dl className="grid grid-cols-2 gap-x-10 gap-y-1 font-mono text-sm md:text-right">
+          <dl className="font-mono text-sm md:text-right">
             <dt className="text-subtle">Graduation</dt>
-            <dt className="text-subtle">GPA</dt>
-            <dd className="text-fg">{education.graduation.replace('Expected ', '')}</dd>
-            <dd className="text-fg">{education.gpa}</dd>
+            <dd className="mt-1 text-fg">{education.graduation.replace('Expected ', '')}</dd>
           </dl>
         </div>
 

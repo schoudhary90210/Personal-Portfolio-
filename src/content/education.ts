@@ -3,7 +3,6 @@ export const education = {
   location: 'Madison, WI',
   degree: 'B.S. Computer Science & Mathematics',
   graduation: 'Expected May 2028',
-  gpa: '3.6 / 4.0',
   coursework: [
     'Data Structures & Algorithms',
     'Machine Organization (CS 354)',
