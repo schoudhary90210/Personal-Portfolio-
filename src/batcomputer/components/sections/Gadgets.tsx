@@ -1,9 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import TextReveal from '@/components/ui/TextReveal';
-import { techStack } from '@/data/techStack';
-import { sectionContainerVariants, sectionItemVariants } from '@/lib/animations';
+import TextReveal from '@/batcomputer/components/ui/TextReveal';
+import { techStack } from '@/batcomputer/data/techStack';
+import { sectionContainerVariants, sectionItemVariants } from '@/batcomputer/lib/animations';
 
 export default function Gadgets() {
   return (

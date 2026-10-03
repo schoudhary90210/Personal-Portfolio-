@@ -3,29 +3,29 @@
 import { useState, useCallback, lazy, Suspense } from 'react';
 import dynamic from 'next/dynamic';
 import { AnimatePresence } from 'framer-motion';
-import MonitorFrame from '@/components/ui/MonitorFrame';
-import BootSequence from '@/components/boot/BootSequence';
-import PanelTransition from '@/components/effects/PanelTransition';
-import MainMenu from '@/components/menu/MainMenu';
-import BackButton from '@/components/ui/BackButton';
-import MuteToggle from '@/components/ui/MuteToggle';
-import HUDOverlay from '@/components/ui/HUDOverlay';
-import { useAudio } from '@/hooks/useAudio';
-import type { SectionId } from '@/lib/constants';
+import MonitorFrame from '@/batcomputer/components/ui/MonitorFrame';
+import BootSequence from '@/batcomputer/components/boot/BootSequence';
+import PanelTransition from '@/batcomputer/components/effects/PanelTransition';
+import MainMenu from '@/batcomputer/components/menu/MainMenu';
+import BackButton from '@/batcomputer/components/ui/BackButton';
+import MuteToggle from '@/batcomputer/components/ui/MuteToggle';
+import HUDOverlay from '@/batcomputer/components/ui/HUDOverlay';
+import { useAudio } from '@/batcomputer/hooks/useAudio';
+import type { SectionId } from '@/batcomputer/lib/constants';
 
 // Canvas/window-dependent components — client-only to prevent hydration mismatch
-const BatSwarm = dynamic(() => import('@/components/effects/BatSwarm'), { ssr: false });
-const BatScatter = dynamic(() => import('@/components/effects/BatScatter'), { ssr: false });
-const GothamRain = dynamic(() => import('@/components/effects/GothamRain'), { ssr: false });
-const CursorGlow = dynamic(() => import('@/components/effects/CursorGlow'), { ssr: false });
-const ScarecrowEffect = dynamic(() => import('@/components/effects/ScarecrowEffect'), { ssr: false });
+const BatSwarm = dynamic(() => import('@/batcomputer/components/effects/BatSwarm'), { ssr: false });
+const BatScatter = dynamic(() => import('@/batcomputer/components/effects/BatScatter'), { ssr: false });
+const GothamRain = dynamic(() => import('@/batcomputer/components/effects/GothamRain'), { ssr: false });
+const CursorGlow = dynamic(() => import('@/batcomputer/components/effects/CursorGlow'), { ssr: false });
+const ScarecrowEffect = dynamic(() => import('@/batcomputer/components/effects/ScarecrowEffect'), { ssr: false });
 
 // Lazy load sections
-const OperativeProfile = lazy(() => import('@/components/sections/OperativeProfile'));
-const Arsenal = lazy(() => import('@/components/sections/Arsenal'));
-const Gadgets = lazy(() => import('@/components/sections/Gadgets'));
-const CaseHistory = lazy(() => import('@/components/sections/CaseHistory'));
-const Contact = lazy(() => import('@/components/sections/Contact'));
+const OperativeProfile = lazy(() => import('@/batcomputer/components/sections/OperativeProfile'));
+const Arsenal = lazy(() => import('@/batcomputer/components/sections/Arsenal'));
+const Gadgets = lazy(() => import('@/batcomputer/components/sections/Gadgets'));
+const CaseHistory = lazy(() => import('@/batcomputer/components/sections/CaseHistory'));
+const Contact = lazy(() => import('@/batcomputer/components/sections/Contact'));
 
 type AppState = 'boot' | 'bat-swarm' | 'menu' | 'section';
 

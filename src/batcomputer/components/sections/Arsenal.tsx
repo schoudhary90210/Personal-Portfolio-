@@ -2,9 +2,9 @@
 
 import { motion } from 'framer-motion';
 import ArsenalCard from './ArsenalCard';
-import TextReveal from '@/components/ui/TextReveal';
-import { projects } from '@/data/projects';
-import { sectionContainerVariants, sectionItemVariants } from '@/lib/animations';
+import TextReveal from '@/batcomputer/components/ui/TextReveal';
+import { projects } from '@/batcomputer/data/projects';
+import { sectionContainerVariants, sectionItemVariants } from '@/batcomputer/lib/animations';
 
 export default function Arsenal() {
   return (

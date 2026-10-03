@@ -2,8 +2,8 @@
 
 import { motion } from 'framer-motion';
 import CornerBrackets from '../ui/CornerBrackets';
-import { renderAnimatedNumbers } from '@/components/ui/AnimatedCounter';
-import type { Experience } from '@/data/experience';
+import { renderAnimatedNumbers } from '@/batcomputer/components/ui/AnimatedCounter';
+import type { Experience } from '@/batcomputer/data/experience';
 
 interface TimelineEntryProps {
   experience: Experience;

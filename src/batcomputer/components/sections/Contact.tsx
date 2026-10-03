@@ -3,9 +3,10 @@
 import { useEffect, useState, useCallback, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail } from 'lucide-react';
-import TextReveal from '@/components/ui/TextReveal';
-import MagneticWrap from '@/components/ui/MagneticWrap';
-import { sectionContainerVariants, sectionItemVariants } from '@/lib/animations';
+import TextReveal from '@/batcomputer/components/ui/TextReveal';
+import MagneticWrap from '@/batcomputer/components/ui/MagneticWrap';
+import { sectionContainerVariants, sectionItemVariants } from '@/batcomputer/lib/animations';
+import { site } from '@/content/site';
 
 const CONNECTION_LINES = [
   'INITIATING SECURE CHANNEL...',
@@ -18,12 +19,12 @@ const CONNECTION_LINES = [
 const PROCESSING_INDICES = new Set([0, 2]);
 
 const CHANNELS = [
-  { label: 'CHANNEL 01', name: 'GITHUB', href: 'https://github.com/schoudhary90210', Icon: Github, external: true },
-  { label: 'CHANNEL 02', name: 'LINKEDIN', href: 'https://linkedin.com/in/siddhantchoudhary--', Icon: Linkedin, external: true },
-  { label: 'CHANNEL 03', name: 'EMAIL', href: 'mailto:csiddhant12@gmail.com', Icon: Mail, external: false },
+  { label: 'CHANNEL 01', name: 'GITHUB', href: site.github, Icon: Github, external: true },
+  { label: 'CHANNEL 02', name: 'LINKEDIN', href: site.linkedin, Icon: Linkedin, external: true },
+  { label: 'CHANNEL 03', name: 'EMAIL', href: `mailto:${site.email}`, Icon: Mail, external: false },
 ];
 
-const EMAIL = 'csiddhant12@gmail.com';
+const EMAIL = site.email;
 
 export default function Contact() {
   const [lineTexts, setLineTexts] = useState<string[]>([]);
@@ -354,7 +355,7 @@ export default function Contact() {
       {/* Phase 4: Email */}
       <div style={{ opacity: emailText ? 1 : 0, transition: 'opacity 0.3s' }}>
         <a
-          href="mailto:csiddhant12@gmail.com"
+          href={`mailto:${site.email}`}
           className="group font-mono text-xs text-text-secondary hover:text-accent transition-colors duration-200"
         >
           {emailText}

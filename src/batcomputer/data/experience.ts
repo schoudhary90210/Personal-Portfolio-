@@ -9,6 +9,16 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
+    id: 'morgridge',
+    company: 'Morgridge Institute for Research — Stefely Lab',
+    role: 'Student Researcher, Computational Biology',
+    date: 'Sep 2026 – Present',
+    location: 'Madison, WI',
+    bullets: [
+      'Building Python workflows for high-dimensional mass-spectrometry data, using clustering and graph analysis to study mitochondrial protein complexes.',
+    ],
+  },
+  {
     id: 'undp',
     company: 'United Nations Development Programme (UNDP)',
     role: 'Independent Research Consultant',

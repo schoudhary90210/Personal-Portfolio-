@@ -1,3 +1,5 @@
+import { site } from '@/content/site';
+
 export interface ContactLink {
   id: string;
   label: string;
@@ -9,21 +11,21 @@ export const contactLinks: ContactLink[] = [
   {
     id: 'github',
     label: 'GitHub',
-    href: 'https://github.com/schoudhary90210',
+    href: site.github,
     icon: 'github',
   },
   {
     id: 'linkedin',
     label: 'LinkedIn',
-    href: 'https://linkedin.com/in/siddhantchoudhary--',
+    href: site.linkedin,
     icon: 'linkedin',
   },
   {
     id: 'email',
     label: 'Email',
-    href: 'mailto:csiddhant12@gmail.com',
+    href: `mailto:${site.email}`,
     icon: 'mail',
   },
 ];
 
-export const EMAIL_ADDRESS = 'csiddhant12@gmail.com';
+export const EMAIL_ADDRESS = site.email;

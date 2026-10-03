@@ -33,11 +33,11 @@ export const projects: Project[] = [
   {
     id: 'traction',
     name: 'TRACTION',
-    tagline: 'Edge AI crop disease detection — Qualcomm Top 5',
+    tagline: 'Edge AI crop disease detection',
     description:
-      'ConvNeXt model on ONNX Runtime hitting 94% accuracy at 12+ FPS. Includes GPS outbreak mapping and an on-device LLM advisor — zero cloud dependency.',
+      'Built at the Qualcomm Edge AI Hackathon. ConvNeXt model on ONNX Runtime hitting 94% accuracy at 12+ FPS. Includes GPS outbreak mapping and an on-device LLM advisor — zero cloud dependency.',
     techIcons: ['Python', 'ONNX', 'Streamlit', 'Llama'],
-    metrics: ['94% accuracy', '+14% over MobileNetV2', 'Top 5 Qualcomm Track'],
+    metrics: ['94% accuracy', '+14% over MobileNetV2'],
     github: 'https://github.com/schoudhary90210/traction',
   },
   {

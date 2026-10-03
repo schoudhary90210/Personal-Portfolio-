@@ -7,7 +7,7 @@ import gsap from 'gsap';
 const HEADER_FIELDS = [
   { label: 'DESIGNATION', value: 'B.S. Computer Science & Mathematics' },
   { label: 'INSTITUTION', value: 'University of Wisconsin-Madison' },
-  { label: 'CLASS', value: '2027' },
+  { label: 'GRADUATION', value: 'MAY 2028' },
   { label: 'STATUS', value: 'ACTIVE' },
 ];
 
@@ -22,7 +22,7 @@ const STAT_BARS = [
 const FOCUS_TAGS = ['QUANTITATIVE FINANCE', 'MACHINE LEARNING & AI'];
 
 const BIO =
-  'Sophomore at UW-Madison studying Computer Science and Mathematics. I build things at the intersection of quantitative finance, machine learning, and low-level systems. Previously at UNDP, MD Anderson Cancer Center, and Qatar Computing Research Institute.';
+  'Computer Science and Mathematics student at UW-Madison, graduating May 2028. I build things at the intersection of quantitative finance, machine learning, and low-level systems. Currently a student researcher in the Stefely Lab at the Morgridge Institute for Research; previously at UNDP, MD Anderson Cancer Center, and Qatar Computing Research Institute.';
 
 const SKILL_TICKER =
   'PYTHON // C // C++ // PYTORCH // NUMPY // PANDAS // DOCKER // FASTAPI // POSTGRESQL // AWS // LINUX // GIT // ONNX // OPENCV // SCIKIT-LEARN // MONTE CARLO // DYNAMIC PROGRAMMING // CONCURRENCY';

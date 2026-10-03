@@ -3,9 +3,9 @@
 import { useState, useRef, useCallback, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Github, ExternalLink, X } from 'lucide-react';
-import MagneticWrap from '@/components/ui/MagneticWrap';
-import { renderAnimatedNumbers } from '@/components/ui/AnimatedCounter';
-import type { Project } from '@/data/projects';
+import MagneticWrap from '@/batcomputer/components/ui/MagneticWrap';
+import { renderAnimatedNumbers } from '@/batcomputer/components/ui/AnimatedCounter';
+import type { Project } from '@/batcomputer/data/projects';
 
 interface ArsenalCardProps {
   project: Project;

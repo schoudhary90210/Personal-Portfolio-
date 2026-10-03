@@ -2,8 +2,8 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { MENU_ITEMS, type SectionId } from '@/lib/constants';
-import { menuContainerVariants, menuItemVariants } from '@/lib/animations';
+import { MENU_ITEMS, type SectionId } from '@/batcomputer/lib/constants';
+import { menuContainerVariants, menuItemVariants } from '@/batcomputer/lib/animations';
 
 const GLITCH_CHARS = '!@#$%^&*<>{}[]';
 

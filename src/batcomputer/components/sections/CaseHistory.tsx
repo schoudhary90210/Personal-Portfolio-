@@ -2,10 +2,10 @@
 
 import { motion } from 'framer-motion';
 import TimelineEntry from './TimelineEntry';
-import TextReveal from '@/components/ui/TextReveal';
-import MagneticWrap from '@/components/ui/MagneticWrap';
-import { experiences } from '@/data/experience';
-import { sectionContainerVariants, sectionItemVariants } from '@/lib/animations';
+import TextReveal from '@/batcomputer/components/ui/TextReveal';
+import MagneticWrap from '@/batcomputer/components/ui/MagneticWrap';
+import { experiences } from '@/batcomputer/data/experience';
+import { sectionContainerVariants, sectionItemVariants } from '@/batcomputer/lib/animations';
 
 export default function CaseHistory() {
   return (

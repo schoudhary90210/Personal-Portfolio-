@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@import "tailwindcss" source(none);
+@source "../../batcomputer";
+@source "./";
 
 /* ── CSS Custom Properties ── */
 :root {
