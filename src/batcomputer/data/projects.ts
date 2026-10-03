@@ -13,21 +13,21 @@ export const projects: Project[] = [
   {
     id: 'quant-backtest-engine',
     name: 'Quant-Backtest-Engine',
-    tagline: 'Quantitative backtesting & portfolio optimization',
+    tagline: 'Quantitative backtesting & strategy evaluation',
     description:
-      'Event-driven backtester with walk-forward validation across 15 years of daily data and 12 assets. Implements Black-Litterman, Ledoit-Wolf shrinkage, Kelly Criterion, and a 50k-path Monte Carlo engine.',
-    techIcons: ['Python', 'NumPy', 'pandas'],
-    metrics: ['0.80 OOS Sharpe ratio', '18.4% CAGR', '92% IS retention'],
+      'Python backtesting engine comparing 7 portfolio strategies across 12 assets, with Parquet data caching, transaction-cost modeling, walk-forward evaluation and pytest coverage for look-ahead bias.',
+    techIcons: ['Python', 'pandas', 'NumPy', 'pytest'],
+    metrics: ['7 strategies × 12 assets', 'Walk-forward evaluation', 'Look-ahead bias tests'],
     github: 'https://github.com/schoudhary90210/Quant-Backtest-Engine',
   },
   {
     id: 'cadence',
     name: 'Cadence',
-    tagline: 'AI-powered speech fluency analysis platform',
+    tagline: 'Speech-fluency practice app',
     description:
-      'Speech fluency training app built at CheeseHacks 2026. Classifies disfluencies with wav2vec2 and transcribes with Whisper in real time.',
-    techIcons: ['Python', 'PyTorch', 'Whisper'],
-    metrics: ['97.9% F1 score'],
+      'Built with a team at CheeseHacks 2026. Combines Whisper transcription with Wav2Vec2 embeddings and classification to flag disfluencies, served by a Dockerized FastAPI backend on Google Cloud Run.',
+    techIcons: ['TypeScript', 'Next.js', 'FastAPI', 'GCP'],
+    metrics: ['Whisper + Wav2Vec2', 'Deployed on Cloud Run'],
     github: 'https://github.com/schoudhary90210/Cadence',
   },
   {
@@ -35,28 +35,28 @@ export const projects: Project[] = [
     name: 'TRACTION',
     tagline: 'Edge AI crop disease detection',
     description:
-      'Built at the Qualcomm Edge AI Hackathon. ConvNeXt model on ONNX Runtime hitting 94% accuracy at 12+ FPS. Includes GPS outbreak mapping and an on-device LLM advisor — zero cloud dependency.',
-    techIcons: ['Python', 'ONNX', 'Streamlit', 'Llama'],
-    metrics: ['94% accuracy', '+14% over MobileNetV2'],
+      'Built with a team at the Qualcomm Edge AI Hackathon. A PyTorch-trained MobileNetV2 runs through ONNX Runtime for local camera inference, with detection logs and a local Ollama assistant shaped by Wisconsin farmer feedback.',
+    techIcons: ['PyTorch', 'ONNX', 'Streamlit', 'Ollama'],
+    metrics: ['MobileNetV2 on ONNX Runtime', 'Local inference'],
     github: 'https://github.com/schoudhary90210/traction',
   },
   {
     id: 'custom-memalloc',
     name: 'Custom-MemAlloc',
-    tagline: 'High-performance thread-safe memory allocator',
+    tagline: 'Thread-safe memory allocator in C',
     description:
-      'Segregated Free List allocator with boundary tagging and immediate coalescing. Pushes 6.0M+ ops/sec across 8 threads at 85%+ utilization.',
+      'Segregated free-list allocator with boundary tags, coalescing, mutex-protected shared state and 16-byte alignment, stress-tested across eight threads.',
     techIcons: ['C', 'POSIX', 'ARM64'],
-    metrics: ['6.0M+ ops/sec', '85%+ utilization', 'O(1) allocation'],
+    metrics: ['Segregated free lists', 'Boundary-tag coalescing', '8-thread stress test'],
     github: 'https://github.com/schoudhary90210/Custom-MemAlloc',
   },
   {
     id: 'bio-intel-agent',
     name: 'Bio-Intel-Agent',
-    tagline: 'Serverless health monitoring data pipeline',
+    tagline: 'Biomedical literature-monitoring pipeline',
     description:
-      'FastAPI + GPT-4 pipeline for real-time health data ingestion and AI-driven biomedical analysis.',
-    techIcons: ['Python', 'FastAPI', 'OpenAI'],
+      'FastAPI pipeline that pulls recent PubMed abstracts for a topic, summarizes them with a local Ollama model or an extractive fallback, and posts updates to Slack, with Redis caching.',
+    techIcons: ['Python', 'FastAPI', 'Ollama', 'Redis'],
     github: 'https://github.com/schoudhary90210/Bio-Intel-Agent',
   },
   {
@@ -64,7 +64,7 @@ export const projects: Project[] = [
     name: 'netmhcstabpan-docker',
     tagline: 'Containerized peptide-MHC stability prediction',
     description:
-      'Dockerized NetMHCstabpan for reproducible cross-architecture deployment (ARM64/AMD64). Automated dependency resolution cut researcher setup time by 90%.',
+      'Containerized NetMHCstabpan with Docker, packaging legacy Linux dependencies for reproducible deployment and documenting AMD64 emulation on Apple Silicon.',
     techIcons: ['Docker', 'Bash', 'Linux'],
     metrics: ['Setup time reduced from ~2.5 hrs to <15 min'],
     github: 'https://github.com/schoudhary90210/netmhcstabpan-docker',

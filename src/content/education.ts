@@ -8,10 +8,7 @@ export const education = {
     'Data Structures & Algorithms',
     'Machine Organization (CS 354)',
     'Big Data Systems (CS 544)',
-    'Discrete Mathematics',
     'Linear Algebra',
     'Probability & Statistical Inference',
-    'Numerical Methods',
-    'Theory of Computation',
   ],
 } as const;

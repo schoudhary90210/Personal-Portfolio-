@@ -15,7 +15,7 @@ export const experiences: Experience[] = [
     date: 'Sep 2026 – Present',
     location: 'Madison, WI',
     bullets: [
-      'Building Python workflows for high-dimensional mass-spectrometry data, using clustering and graph analysis to study mitochondrial protein complexes.',
+      'Scoping Python data-processing and analysis workflows with researchers to study mitochondrial protein complexes using mass-spectrometry data.',
     ],
   },
   {
@@ -25,8 +25,8 @@ export const experiences: Experience[] = [
     date: 'Dec 2025 – Jan 2026',
     location: 'Doha, Qatar',
     bullets: [
-      'Built Python data pipeline processing $2B+ in OECD development finance across 50+ countries. Developed OLS regression models benchmarking Qatar\'s allocation against GCC and G7 donor profiles.',
-      'Produced automated visualization dashboards adopted by senior UNDP leadership.',
+      'Built a reusable Python/pandas pipeline to clean and standardize OECD aid-flow records, enabling comparisons of donor allocations across Qatar and GCC peers.',
+      'Created Matplotlib charts and dashboards to summarize allocation patterns for internal strategy discussions.',
     ],
   },
   {
@@ -36,8 +36,8 @@ export const experiences: Experience[] = [
     date: 'Jun 2025 – Aug 2025',
     location: 'Houston, TX',
     bullets: [
-      'Containerized NetMHCstabpan peptide-MHC stability prediction pipeline via Docker. Automated dependency resolution reducing researcher setup time by 90%.',
-      'Authored runbooks adopted by 3+ research teams.',
+      'Reduced Linux HPC setup from about 2.5 hours to under 15 minutes by automating installation with Bash and documenting a repeatable setup procedure.',
+      'Containerized NetMHCstabpan with Docker, packaging legacy Linux dependencies for reproducible deployment and documenting AMD64 emulation on Apple Silicon.',
     ],
   },
   {
@@ -47,8 +47,7 @@ export const experiences: Experience[] = [
     date: 'May 2023 – Aug 2023',
     location: 'Doha, Qatar',
     bullets: [
-      'Developed time-series classification models on astronomical light-curve datasets, improving transient signal detection accuracy by 14%.',
-      'Engineered feature extraction pipeline processing 50,000+ observations.',
+      'Cleaned astronomical observations, extracted time-series features and trained detection models to rank candidates for follow-up.',
     ],
   },
 ];

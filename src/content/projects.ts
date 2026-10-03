@@ -46,7 +46,7 @@ export const projects: Project[] = [
     event: 'CheeseHacks 2026',
     date: 'March 2026',
     team: 'Team project',
-    role: 'Full-stack, ML integration, cloud deployment',
+    role: 'Cloud deployment, full-stack integration',
     summary:
       'A speech-fluency practice app for people with speech impediments. Record or upload audio, review feedback on disfluencies, and practice over time.',
     stack: [
@@ -63,24 +63,24 @@ export const projects: Project[] = [
     problem:
       'Speech practice is most useful when feedback is specific and repeatable. Cadence gives people a place to record themselves, see where disfluencies happen on the audio timeline, and return to structured exercises and their session history instead of starting from scratch.',
     work: [
-      'Browser recording and upload, waveform-based feedback, practice exercises, learning flows and session history in a Next.js and TypeScript front end.',
-      'An analysis path combining Whisper transcription with a Wav2Vec2 and Random Forest classifier for disfluencies, plus Google Speech-to-Text as a second transcription input.',
-      'A FastAPI backend with Firestore and cloud storage for sessions and recordings.',
-      'Docker images deployed to Google Cloud Run.',
+      'Browser recording and upload, practice exercises, learning flows and session history in a TypeScript/Next.js interface, with feedback tied to the audio timeline.',
+      'An analysis path combining Whisper transcription with Wav2Vec2 embeddings and a classifier to identify disfluencies, plus Google Speech-to-Text as a second transcription input.',
+      'A FastAPI backend with Firestore session storage and cloud storage for recordings.',
+      'The backend packaged with Docker and deployed to Google Cloud Run.',
     ],
     credit:
-      'Built with a team. I worked across the full-stack app, the machine-learning integration and the cloud deployment; teammates led backend signal processing, frontend/UI and accessibility.',
+      'Co-developed with a team. I deployed the Dockerized FastAPI backend to Google Cloud Run and connected the TypeScript/Next.js interface with Firestore session storage and audio-timeline feedback; teammates led backend signal processing, frontend/UI and accessibility.',
     decision: {
       title: 'Feedback tied to the audio, not just a score',
       body: 'Instead of returning a single fluency number, Cadence anchors feedback to the audio timeline so a user can see and replay the moment a disfluency happened. The interface also offers adjustable text, contrast and motion settings and full keyboard access, because the people most likely to use it should not have to fight the UI.',
     },
     results: [
-      '97.9% F1 on the team’s disfluency-classification evaluation.',
-      'Feedback from 15 student testers shaped the practice flow.',
+      'A working record-to-feedback flow: Whisper transcription and Wav2Vec2-based classification, surfaced on the audio timeline.',
+      'The FastAPI backend runs as a Docker container on Google Cloud Run with Firestore session storage.',
     ],
     limits: [
       'A practice and analysis prototype, not a clinically validated treatment tool.',
-      'A model metric on its own does not show improved speech outcomes.',
+      'Detection flags likely disfluencies to practice on; it is not a diagnosis.',
     ],
     links: [{ label: 'See the code', href: `${GITHUB}/Cadence`, kind: 'code' }],
     featured: true,
@@ -93,25 +93,27 @@ export const projects: Project[] = [
     event: 'Qualcomm Edge AI Hackathon',
     date: 'February 2026',
     team: 'Team project',
+    role: 'Streamlit workflow, detection logs, local assistant',
     summary:
       'An offline crop-disease app that pairs on-device image classification with a field-oriented interface and a local language-model assistant.',
-    stack: ['PyTorch', 'ONNX Runtime', 'Streamlit', 'Ollama', 'Python'],
+    stack: ['PyTorch', 'MobileNetV2', 'ONNX Runtime', 'Streamlit', 'Ollama', 'Python'],
     problem:
       'Farmers checking crops in the field often have unreliable connectivity, so a disease detector that depends on the cloud fails exactly where it is needed. Traction runs classification and its assistant on the device itself.',
     work: [
-      'An image classifier trained in PyTorch and exported to ONNX for local inference, with hardware-provider selection, taking the model past notebook evaluation.',
-      'A Streamlit interface with live camera input, detection logs and latency and utilization readouts.',
-      'A local assistant served through Ollama, a map view of detections and persistent session records.',
-      'Workflow refinements based on feedback from Wisconsin farmers.',
+      'A MobileNetV2 crop-disease model trained in PyTorch and deployed through ONNX Runtime for local camera inference, taking it past notebook evaluation.',
+      'A Streamlit workflow with live camera input, detection logs and latency and utilization readouts.',
+      'A local Ollama assistant that analyzes recorded crop-disease observations, plus a map view of detections and persistent session records.',
+      'Workflow changes driven by feedback from Wisconsin farmers.',
     ],
-    credit: 'Built with a team at the Qualcomm Edge AI Hackathon.',
+    credit:
+      'Built with a team at the Qualcomm Edge AI Hackathon. My part: folding Wisconsin farmer feedback into the Streamlit workflow, and adding the detection logs and the local Ollama assistant.',
     decision: {
       title: 'Local by default',
       body: 'Every step a field visit depends on runs on the device: classification and the assistant need no cloud round-trip. Temporal smoothing across camera frames keeps a single noisy frame from flipping the result, and the app shows latency and utilization so the tradeoffs of the chosen hardware provider stay visible.',
     },
     results: [
-      'Classification and the assistant run fully on-device, with no cloud dependency for inference.',
-      'Farmer feedback informed changes to the field workflow.',
+      'MobileNetV2 inference runs locally through ONNX Runtime on live camera input, with no cloud round-trip.',
+      'Feedback from Wisconsin farmers shaped the Streamlit workflow.',
     ],
     limits: [
       'The map uses a simulated tractor position rather than live GPS.',
@@ -125,31 +127,30 @@ export const projects: Project[] = [
     name: 'Quant Backtest Engine',
     category: 'Quantitative finance',
     context: 'Research tool',
-    date: '2026',
+    date: 'February 2026',
     team: 'Personal project',
     role: 'Design and implementation',
     summary:
-      'A Python research engine for comparing portfolio strategies with transaction costs, risk and out-of-sample validation built in.',
-    stack: ['Python', 'NumPy', 'pandas'],
+      'A Python backtesting engine that compares portfolio strategies with transaction-cost modeling, walk-forward evaluation and tests that guard against look-ahead bias.',
+    stack: ['Python', 'pandas', 'NumPy', 'pytest', 'Parquet'],
     problem:
       'A backtest that looks great is easy to produce and easy to be fooled by. I built this engine to see how sensitive an appealing result is to its assumptions (costs, risk, and whether a strategy holds up on data it was not tuned on) and to make that analysis reproducible.',
     work: [
-      'A modular design that separates data, simulation, optimization, risk and reporting.',
-      'Seven strategies compared across twelve assets, with transaction costs included.',
-      'Walk-forward analysis and Monte Carlo simulation for out-of-sample testing, plus statistical checks on the differences between strategies.',
-      'A test suite documented at 470 tests across 28 modules.',
+      'Seven portfolio strategies compared across twelve assets behind reusable strategy interfaces.',
+      'Transaction-cost modeling, with Parquet caching so market data is not refetched on every run.',
+      'Walk-forward evaluation, so each strategy is judged on data it was not tuned on.',
+      'pytest coverage for portfolio accounting, missing-data handling and look-ahead bias.',
     ],
     decision: {
-      title: 'Letting the validation win',
-      body: 'Under stricter out-of-sample testing, the best-looking strategy did not statistically dominate a simple equal-weight portfolio at 95% confidence. The engine reports that result plainly instead of tuning until it disappears, which is exactly the kind of finding it was built to surface.',
+      title: 'Testing for look-ahead bias',
+      body: 'The easiest way to fool yourself with a backtest is to let it peek at the future. Alongside portfolio accounting and missing-data handling, the tests check that every historical decision uses only data available at that point. With walk-forward evaluation on top, an honest, less flattering result beats an impressive one that cannot be trusted.',
     },
     results: [
       'Seven strategies and twelve assets evaluated under one cost-aware framework.',
-      '470 tests across 28 modules, as documented in the repository.',
+      'Walk-forward evaluation and look-ahead-bias tests built into the workflow.',
     ],
     limits: [
       'Results are historical simulations, not live trading performance.',
-      'No strategy statistically dominated equal-weight at 95% confidence.',
     ],
     links: [{ label: 'See the code', href: `${GITHUB}/Quant-Backtest-Engine`, kind: 'code' }],
     related: {
@@ -182,8 +183,7 @@ export const projects: Project[] = [
       body: 'Debugging alignment problems, realloc corruption and deadlocks became as important as improving throughput. A fast allocator that occasionally corrupts memory is not useful, so the stress tests that exposed those bugs are part of the project.',
     },
     results: [
-      'About 6.08M operations per second in an eight-thread stress test, as reported in the README.',
-      'Over 85% memory utilization in the README benchmarks.',
+      'Benchmarked under an eight-thread stress test; the repository README documents the throughput and utilization results.',
     ],
     limits: [
       'Benchmark numbers depend on the machine, compiler flags and allocation-size mix; they are not a head-to-head comparison with the system malloc.',

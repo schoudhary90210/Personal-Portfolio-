@@ -21,10 +21,9 @@ export const experience: ExperienceItem[] = [
     location: 'Madison, WI',
     period: 'Sep 2026 – Present',
     highlights: [
-      'Working where computation meets mitochondrial biology, helping turn research questions into reproducible data-processing and analysis workflows.',
-      'Building Python workflows for high-dimensional mass-spectrometry data, using clustering and graph analysis to study mitochondrial protein complexes.',
+      'Scoping Python data-processing and analysis workflows with researchers to study mitochondrial protein complexes using mass-spectrometry data.',
     ],
-    tags: ['Python', 'Mass spectrometry', 'Clustering', 'Graph analysis'],
+    tags: ['Python', 'Mass spectrometry', 'Research workflows'],
   },
   {
     id: 'undp',
@@ -33,8 +32,8 @@ export const experience: ExperienceItem[] = [
     location: 'Doha, Qatar',
     period: 'Dec 2025 – Jan 2026',
     highlights: [
-      'Built reusable Python cleaning and analysis steps for OECD development-finance records, making comparisons across Qatar and neighboring GCC donors consistent.',
-      'Summarized donor-allocation patterns in charts and dashboards for internal strategy discussions.',
+      'Built a reusable Python/pandas pipeline to clean and standardize OECD aid-flow records, enabling comparisons of donor allocations across Qatar and GCC peers.',
+      'Created Matplotlib charts and dashboards to summarize allocation patterns for internal strategy discussions.',
     ],
     tags: ['Python', 'pandas', 'Matplotlib'],
   },
@@ -45,9 +44,8 @@ export const experience: ExperienceItem[] = [
     location: 'Houston, TX',
     period: 'Jun – Aug 2025',
     highlights: [
-      'Containerized the NetMHCstabpan peptide–MHC stability prediction tool with Docker so researchers no longer had to rebuild a fragile environment.',
-      'Resolved compatibility issues and automated the Linux/HPC installation workflow, cutting setup from roughly 2.5 hours to under 15 minutes.',
-      'Wrote usage documentation covering peptide and FASTA inputs, HLA allele selection, thresholds and spreadsheet output.',
+      'Reduced Linux HPC setup from about 2.5 hours to under 15 minutes by automating installation with Bash and documenting a repeatable setup procedure.',
+      'Containerized the NetMHCstabpan peptide–MHC stability prediction tool with Docker, packaging legacy Linux dependencies for reproducible deployment and documenting AMD64 emulation on Apple Silicon.',
     ],
     tags: ['Docker', 'Bash', 'Linux / HPC'],
     link: {
@@ -78,7 +76,7 @@ export const leadership: ExperienceItem[] = [
     role: 'Chair of Operations',
     location: 'UW–Madison',
     highlights: [
-      'Coordinate club programming, manage event logistics and keep members informed, bringing together students interested in finance and technology.',
+      'Coordinate programming, logistics and member communication for a club that brings together students interested in finance and technology.',
     ],
     tags: ['Operations', 'Events', 'Leadership'],
   },

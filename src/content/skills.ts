@@ -8,7 +8,7 @@ export interface SkillGroup {
 export const skills: SkillGroup[] = [
   {
     name: 'Languages',
-    items: ['Python', 'C', 'C++', 'Java', 'TypeScript', 'JavaScript', 'SQL', 'Bash'],
+    items: ['Python', 'SQL', 'Java', 'C', 'C++', 'TypeScript', 'JavaScript', 'Bash'],
   },
   {
     name: 'ML & data',
@@ -19,20 +19,20 @@ export const skills: SkillGroup[] = [
       'pandas',
       'NumPy',
       'DuckDB',
-      'PyArrow',
       'Parquet',
+      'PyArrow',
+      'Matplotlib',
       'Whisper',
       'Wav2Vec2',
-      'OpenCV',
     ],
   },
   {
-    name: 'Web & APIs',
-    items: ['React', 'Next.js', 'FastAPI', 'REST', 'Firestore', 'PostgreSQL'],
+    name: 'Web & databases',
+    items: ['React', 'Next.js', 'FastAPI', 'PostgreSQL', 'Firestore'],
   },
   {
-    name: 'Infrastructure',
-    items: ['Linux', 'Docker', 'Google Cloud Run', 'Git & GitHub', 'Testing & CI'],
+    name: 'Tools',
+    items: ['Git', 'Linux', 'Docker', 'Google Cloud', 'pytest', 'Ollama'],
   },
   {
     name: 'Distributed systems',

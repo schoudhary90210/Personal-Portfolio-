@@ -25,7 +25,7 @@ const BIO =
   'Computer Science and Mathematics student at UW-Madison, graduating May 2028. I build things at the intersection of quantitative finance, machine learning, and low-level systems. Currently a student researcher in the Stefely Lab at the Morgridge Institute for Research; previously at UNDP, MD Anderson Cancer Center, and Qatar Computing Research Institute.';
 
 const SKILL_TICKER =
-  'PYTHON // C // C++ // PYTORCH // NUMPY // PANDAS // DOCKER // FASTAPI // POSTGRESQL // AWS // LINUX // GIT // ONNX // OPENCV // SCIKIT-LEARN // MONTE CARLO // DYNAMIC PROGRAMMING // CONCURRENCY';
+  'PYTHON // C // C++ // TYPESCRIPT // PYTORCH // NUMPY // PANDAS // DUCKDB // DOCKER // FASTAPI // POSTGRESQL // GOOGLE CLOUD // LINUX // GIT // ONNX RUNTIME // SCIKIT-LEARN // PYTEST // OLLAMA // CONCURRENCY';
 
 export default function OperativeProfile() {
   const cardRef = useRef<HTMLDivElement>(null);
