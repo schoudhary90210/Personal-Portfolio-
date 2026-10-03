@@ -42,4 +42,4 @@ export const skills: SkillGroup[] = [
 ];
 
 export const aiPractice =
-  'I use Claude Code for brainstorming, debugging, testing and documentation, and I integrate locally hosted LLMs (Ollama) into application workflows. The goal is always software I can understand, test and maintain.';
+  'I’m comfortable using Claude and Codex for AI-assisted development, including brainstorming, debugging, testing and documentation. I also love integrating locally hosted LLMs into application workflows. The goal is always software I can understand, test and maintain.';
